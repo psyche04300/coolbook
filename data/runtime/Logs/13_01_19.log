@@ -1,0 +1,54 @@
+[ 2013-01-19T16:38:40+08:00 ] 0.0.0.0 /coolbook/index.php/Top
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.030589s ]
+INFO: [ route_check ] --END-- [ RunTime:0.051490s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.083007s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.068981s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1358584720 [ RunTime:0.062907s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '0.0.0.0' ) LIMIT 1   [ RunTime:0.000682s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.104198s ]
+INFO: Run load_lang Behavior [ RunTime:-1.037084s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.007156s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-1.251059s ]
+INFO: [ view_template ] --END-- [ RunTime:0.062745s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-1.314154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.265548s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.579855s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.602701s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.619950s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.628793s ]
+INFO: Run content_replace Behavior [ RunTime:-1.637666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.069222s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.649341s ]
+INFO: [ view_end ] --END-- [ RunTime:0.061202s ]
+
+[ 2013-01-19T16:38:54+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by a.add_time desc limit 3' at line 1
+ [ SQL语句 ] : select * from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time>= order by a.add_time desc limit 3
+[ 2013-01-19T16:39:34+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:40:10+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:40:20+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:41:16+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:41:27+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:41:47+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:43:07+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:43:19+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T16:43:33+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by count desc' at line 1
+ [ SQL语句 ] : select count(b.id) as count,b.* from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time> order by count desc
+[ 2013-01-19T17:00:37+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1358672437 order by count desc' at line 1
+ [ SQL语句 ] : select count(*) as count from pin_item_like a left join pin_item b on a.item_id=b.id where a.add_time between 1358154037,1358672437 order by count desc
+[ 2013-01-19T17:02:43+08:00 ] ERR: (ThinkException) Action:asign您所请求的方法不存在！
+[ 2013-01-19T17:16:35+08:00 ] ERR: (ThinkException) Action:asign您所请求的方法不存在！
+[ 2013-01-19T17:17:21+08:00 ] ERR: (ThinkException) 模板不存在[./app/Tpl/home/default/top/index.html]
